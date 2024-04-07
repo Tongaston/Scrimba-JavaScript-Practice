@@ -19,8 +19,13 @@
     <div class="container">
       <h1>People Entered:</h1>
       <h2 id="peopleCount">0</h2>
-      <button id="incrementBtn">Increment</button>
-      <button id="saveBtn">Save</button>
+      <button id="incrementBtn" onclick="increment()">Increment</button>
+      <button id="decrementBtn" onclick="decrement()">Decrement</button>
+      <div class="containerBtn">
+        <button id="saveBtn" onclick="save()">Save</button>
+        <button id="clearBtn" onclick="reset()">Clear All</button>
+      </div>
+      <p id="message">Previous entries: </p>
     </div>
   </body>
 </html>

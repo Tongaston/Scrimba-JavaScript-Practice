@@ -1,15 +1,26 @@
-let peopleCount = document.getElementById('peopleCount');
-let incrementBtn = document.getElementById('incrementBtn');
-let saveBtn = document.getElementById('saveBtn');
-
 let count = 0;
 
-incrementBtn.addEventListener('click', () => {
-    count++;
-    peopleCount.innerHTML = count;
-});
+function increment() {
+  count++;
+  peopleCount.textContent = count;
+}
 
-saveBtn.addEventListener('click', () => { 
-    localStorage.setItem('peopleCount', count);
-    alert('Data saved successfully');
-});
+function decrement() {
+  count--;
+  peopleCount.textContent = count;
+}
+
+function save() {
+  let saved = count + ' - ';
+  saveEl.textContent += saved;
+  count = 0;
+  peopleCount.textContent = count;
+}
+
+function reset() {
+  count = 0;
+  peopleCount.textContent = count;
+  saveEl.textContent = 'Previous entries: ';
+}
+
+let saveEl = document.getElementById('message');
