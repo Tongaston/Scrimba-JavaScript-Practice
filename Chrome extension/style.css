@@ -7,17 +7,15 @@
 body {
     font-family: 'Poppins', sans-serif;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
     background-color: rgb(237, 235, 231);
+    min-width: 400px;
 }
 
 #input-el {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #559f2afe;
+    border: 2px solid #5f9341;
     margin-bottom: 5px;
     outline: none;
 
@@ -26,17 +24,37 @@ body {
     }
 }
 
-#input-btn {
+button {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
     border: none;
-    background-color: #559f2afe;
+    background-color: #5f9341;
     color:white;
     cursor: pointer;
-    transition: background-color 0.3s;
+}
 
-    &:hover {
-        background-color: #87d15c;
-    }
+#delete-btn {
+    background-color: transparent;
+    color: #5f9341;
+    padding: 8px 18px;
+    border: solid 2px #5f9341;
+}
+
+#ul-el {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    list-style: none;
+}
+
+li {
+    margin-top: 5px;
+}
+
+a {
+    color: #5f9341;
+    font-size: 1.2rem;
 }
