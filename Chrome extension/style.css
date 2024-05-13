@@ -1,60 +1,65 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    padding: 10px;
-    background-color: rgb(237, 235, 231);
-    min-width: 400px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  background-color: rgb(237, 235, 231);
+  min-width: 400px;
 }
 
 #input-el {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #5f9341;
-    margin-bottom: 5px;
-    outline: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #5f9341;
+  margin-bottom: 5px;
+  outline: none;
 
-    &:focus {
-        background-color:rgb(223, 242, 249);
-    }
+  &:focus {
+    background-color: rgb(223, 242, 249);
+  }
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    background-color: #5f9341;
-    color:white;
-    cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: #5f9341;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 5px;
 }
 
 #delete-btn {
-    background-color: transparent;
-    color: #5f9341;
-    padding: 8px 18px;
-    border: solid 2px #5f9341;
+  background-color: transparent;
+  color: #5f9341;
+  padding: 8px 18px;
+  border: solid 2px #5f9341;
+}
+
+#tab-btn {
+  min-width: 135px;
 }
 
 #ul-el {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 15px;
-    list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 15px;
+  list-style: none;
 }
 
 li {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 a {
-    color: #5f9341;
-    font-size: 1.2rem;
+  color: #5f9341;
+  font-size: 1.2rem;
 }
