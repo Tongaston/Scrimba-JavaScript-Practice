@@ -54,16 +54,24 @@ img {
 }
 
 ul {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 80%;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  gap: 8px;
 }
 
-li {
-  display: flex;
+ul li {
+  font-size: 1.2rem;
   padding: 10px 20px;
   background-color: #FDFDFD;
   color: #838993;
-  margin: 10px 0;
   border-radius: 6px;
+  flex-grow: 1;
+  text-align: center;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
