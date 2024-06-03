@@ -75,3 +75,9 @@ ul li {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+
+ul p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #838993;
+}
