@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color tool</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS -->
+  <script src="script.js" type="module" defer></script>
+
+  <!-- Favicon -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,200&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Color tool</h1>
+    <p class="description">Darken or Lighten your color</p>
+
+    <section class="input-container">
+      <label for="hex-color-el">Color (Hex)</label>
+      <input name="hex-color-el" type="text" placeholder="#000000" id="hexColorEl">
+      
+      <label for="slider" id="sliderText">0%</label>
+      <input type="range" min="0" max="100" value="0"
+          class="slider" id="slider" name="slider"/>
+  
+      <p>Current Color</p>
+      <div id="currentColor" class="color-box"></div>
+  
+      <p>Altered Color</p>
+      <div id="alteredColor" class="color-box"></div>
+    </section>
+  </div>
+  
+</body>
+</html>
