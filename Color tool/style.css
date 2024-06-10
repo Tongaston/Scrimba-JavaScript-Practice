@@ -46,12 +46,13 @@ h1 {
 }
 
 label, p {
+  display: block;
   color: #01016e;
   font-size: 1.2rem;
   margin: 10px 0;
 }
 
-#hexColorEl {
+input[type="text"] {
   padding: 10px;
   font-size: 1.2rem;
   color: #5e029f;
@@ -62,6 +63,19 @@ label, p {
   max-width: 400px;
 }
 
+input[type="range"] {
+  max-width: 400px;
+  margin: 10px 0;
+} 
+
 #sliderText {
   margin: 20px 0 0 10px;
+}
+
+.color-box {
+  height: 100px;
+  width: 100%;
+  background-color: #0505f4;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
 }
