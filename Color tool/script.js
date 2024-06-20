@@ -1,5 +1,8 @@
 const hexColorInput = document.getElementById('hexColorEl')
 const currentColorBox = document.getElementById('currentColor')
+const alteredColorBox = document.getElementById('alteredColor')
+const sliderText = document.getElementById('sliderText')
+const slider = document.getElementById('slider')
 
 const isValidHex = (hex) => {
   if (!hex) return false
@@ -40,4 +43,44 @@ const convertHexToRGB = (hex) => {
 
   return { r, g, b }
 }
-console.log(convertHexToRGB('000'))
+
+const convertRGBToHex = (r, g, b) => {
+  const firstPair = ('0' + r.toString(16)).slice(-2)
+  const secondPair = ('0' + g.toString(16)).slice(-2)
+  const thirdPair = ('0' + b.toString(16)).slice(-2)
+
+  const hex = `#${firstPair}${secondPair}${thirdPair}`
+  return hex
+}
+
+const increaseBrightness = (hex, percent) => {
+  const { r, g, b } = convertHexToRGB(hex)
+
+  const amount = Math.floor((percent / 100) * 255)
+
+  const newR = rangeHexColor(r, amount)
+  const newG = rangeHexColor(g, amount)
+  const newB = rangeHexColor(b, amount)
+  return convertRGBToHex(newR, newG, newB)
+}
+
+const rangeHexColor = (hex, amount) => {
+  const newHex = hex + amount
+  if (newHex > 255) return 255
+  if (newHex < 0) return 0
+  return newHex
+}
+
+increaseBrightness('000', -10)
+
+slider.addEventListener('input', () => {
+  if (!isValidHex(hexColorInput.value)) {
+    hexColorInput.style.border = '2px solid red'
+    return
+  } else {
+    hexColorInput.style.border = 'none'
+    sliderText.textContent = `${slider.value}%`
+    const newHex = increaseBrightness(hexColorInput.value, slider.value)
+    alteredColorBox.style.backgroundColor = newHex
+  }
+})
