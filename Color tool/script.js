@@ -1,6 +1,10 @@
 const hexColorInput = document.getElementById('hexColorEl')
+const toggleBtn = document.getElementById('toggleBtn')
+const lightenText = document.getElementById('lightenText')
+const darkenText = document.getElementById('darkenText')
 const currentColorBox = document.getElementById('currentColor')
 const alteredColorBox = document.getElementById('alteredColor')
+const alteredColorText = document.getElementById('alteredColorText')
 const sliderText = document.getElementById('sliderText')
 const slider = document.getElementById('slider')
 
@@ -82,5 +86,17 @@ slider.addEventListener('input', () => {
     sliderText.textContent = `${slider.value}%`
     const newHex = increaseBrightness(hexColorInput.value, slider.value)
     alteredColorBox.style.backgroundColor = newHex
+    alteredColorText.textContent = `Altered color: ${newHex}`
+  }
+})
+
+toggleBtn.addEventListener('click', () => {
+  toggleBtn.classList.toggle('active')
+  if (toggleBtn.classList.contains('active')) {
+    lightenText.classList.add('unselected')
+    darkenText.classList.remove('unselected')
+  } else {
+    lightenText.classList.remove('unselected')
+    darkenText.classList.add('unselected')
   }
 })
