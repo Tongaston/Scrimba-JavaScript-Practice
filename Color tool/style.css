@@ -52,6 +52,50 @@ label, p {
   margin: 10px 0;
 }
 
+.toggle {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin: 10px 0 0 0;
+  max-width: 250px;
+}
+
+.toggle-btn {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background-color: #b1afaf96;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.inner-circle {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #7803cc;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: 10% ;
+  transition: all 0.25s;
+}
+
+#lightenText {
+  color: #7803cc;
+}
+
+.toggle-btn.active .inner-circle {
+  left: 50%;
+  background-color: #35015a;
+}
+
+.unselected {
+  opacity: 0.25;
+}
+
 input[type="text"] {
   padding: 10px;
   font-size: 1.2rem;
