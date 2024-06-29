@@ -25,6 +25,17 @@
     <section class="input-container">
       <label for="hex-color-el">Color (Hex)</label>
       <input name="hex-color-el" type="text" placeholder="#000000" id="hexColorEl">
+
+      <div class="toggle">
+        <p id="lightenText" class="toggle-text">Lighten</p>
+
+        <div id="toggleBtn" class="toggle-btn">
+          <div class="inner-circle"></div>
+        </div>
+
+        <p id="darkenText" class="toggle-text unselected">Darken</p>
+      </div>
+
       
       <label for="slider" id="sliderText">0%</label>
       <input type="range" min="0" max="100" value="0"
@@ -33,7 +44,7 @@
       <p>Current Color</p>
       <div id="currentColor" class="color-box"></div>
   
-      <p>Altered Color</p>
+      <p id="alteredColorText">Altered Color</p>
       <div id="alteredColor" class="color-box"></div>
     </section>
   </div>
