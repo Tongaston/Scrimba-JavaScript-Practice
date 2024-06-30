@@ -21,6 +21,7 @@ const updateColor = () => {
 
   const strippedHex = inputHex.replace('#', '')
   currentColorBox.style.backgroundColor = '#' + strippedHex
+  reset()
 }
 
 hexColorInput.addEventListener('keyup', updateColor)
@@ -84,7 +85,10 @@ slider.addEventListener('input', () => {
   } else {
     hexColorInput.style.border = 'none'
     sliderText.textContent = `${slider.value}%`
-    const newHex = increaseBrightness(hexColorInput.value, slider.value)
+    const valueColor = toggleBtn.classList.contains('active')
+      ? -slider.value
+      : slider.value
+    const newHex = increaseBrightness(hexColorInput.value, valueColor)
     alteredColorBox.style.backgroundColor = newHex
     alteredColorText.textContent = `Altered color: ${newHex}`
   }
@@ -99,4 +103,12 @@ toggleBtn.addEventListener('click', () => {
     lightenText.classList.remove('unselected')
     darkenText.classList.add('unselected')
   }
+  reset()
 })
+
+const reset = () => {
+  slider.value = 0
+  sliderText.textContent = '0%'
+  alteredColorBox.style.backgroundColor = hexColorEl.value
+  alteredColorText.textContent = `Altered color: ${hexColorEl.value}`
+}
